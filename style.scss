@@ -1,0 +1,140 @@
+// chess game
+$square-color: #789a54;
+$light-square-color: #eaedcc;
+$text-color: #a9a094;
+$bg-color: #302e2b;
+$font-family: 'Roboto', sans-serif;
+
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: $bg-color;
+    font-family: $font-family;
+}
+
+.container {
+  width: 80vw;
+  height: 95vh;
+  color: $text-color;
+  background-color: $bg-color;
+  
+  .board{
+      width: calc(100% - 4rem);
+      aspect-ratio: 1/1;
+      display: grid;
+      grid-template-rows: repeat(9, 1fr);
+      margin: 2rem;
+      $width-position-box: 2rem;
+      position: relative;
+
+      .rowsSection{
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        
+        .row{
+            display: flex;
+            // position: relative;
+
+            .square{
+                flex: 1;
+                aspect-ratio: 1/1;
+                // border: 1px solid black;
+                display: grid;
+                place-items: center;
+                cursor: pointer;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+            .positionCol{
+                height: $width-position-box;
+
+            }
+        }
+
+        &:nth-child(odd) {
+            .row{
+                .square{
+                    &:nth-child(odd) {
+                        background-color: $square-color;
+                    }
+                    &:nth-child(even){
+                        background-color: $light-square-color;
+                    }
+                }
+            }
+        }
+
+        &:nth-child(even) {
+            .row{
+                .square{
+                    &:nth-child(even) {
+                        background-color: $square-color;
+                    }
+                    &:nth-child(odd){
+                        background-color: $light-square-color;
+                    }
+                }
+            }
+        }
+
+        .positionRow, .positionCol{
+            display: grid;
+            place-items: center;
+            background-color: transparent !important;
+            // border: none !important;
+        }
+        
+        .positionRow{
+            position: absolute;
+            top: 0;
+            left: -$width-position-box;
+            width: $width-position-box;
+            height: 100%;
+        }
+      }
+
+      .positionBox{
+        .row{   
+            border: none !important;
+        }
+      }
+    }
+
+    .options{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .buttons{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            width: 80%;
+            gap: 1rem;
+            align-items: center;
+
+            button{
+                flex: 1;
+                aspect-ratio: 3/1;
+                border-radius: 1rem;
+                border: none;
+                background-color: $text-color;
+                color: $bg-color;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+
+                &:hover{
+                    background-color: $square-color;
+                    color: $light-square-color;
+                }
+            }
+        }
+    }
+}

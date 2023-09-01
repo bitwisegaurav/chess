@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jQuery/code.jquery.com_jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!-- creating a structured chess game -->
+    <div class="container">
+        <div class="board">
+            <div class="rowsSection">
+                <div class="positionRow">8</div>
+                <div class="row">
+                    <div class="square" id="a8">
+                        <img src="imgaes/br.png" alt="black rook">
+                    </div>
+                    <div class="square" id="b8">
+                        <img src="imgaes/bn.png" alt="black knight">
+                    </div>
+                    <div class="square" id="c8">
+                        <img src="imgaes/bb.png" alt="black bishop">
+                    </div>
+                    <div class="square" id="d8">
+                        <img src="imgaes/bq.png" alt="black queen">
+                    </div>
+                    <div class="square" id="e8">
+                        <img src="imgaes/bk.png" alt="black king">
+                    </div>
+                    <div class="square" id="f8">
+                        <img src="imgaes/bb.png" alt="black bishop">
+                    </div>
+                    <div class="square" id="g8">
+                        <img src="imgaes/bn.png" alt="black knight">
+                    </div>
+                    <div class="square" id="h8">
+                        <img src="imgaes/br.png" alt="black rook">
+                    </div>
+                </div>
+            </div>
+            <div class="rowsSection">
+                <div class="positionRow">7</div>
+                <div class="row">
+                    <div class="square" id="a7">
+                        <img src="imgaes/bp.png" alt="black pawn">
+                    </div>
+                    <div class="square" id="b7">
+                        <img src="imgaes/bp.png" alt="black pawn">
+                    </div>
+                    <div class="square" id="c7">
+                        <img src="imgaes/bp.png" alt="black pawn">
+                    </div>
+                    <div class="square" id="d7">
+                        <img src="imgaes/bp.png" alt="black pawn">
+                    </div>
+                    <div class="square" id="e7">
+                        <img src="imgaes/bp.png" alt="black pawn">
+                    </div>
+                    <div class="square" id="f7">
+                        <img src="imgaes/bp.png" alt="black pawn">
+                    </div>
+                    <div class="square" id="g7">
+                        <img src="imgaes/bp.png" alt="black pawn">
+                    </div>
+                    <div class="square" id="h7">
+                        <img src="imgaes/bp.png" alt="black pawn">
+                    </div>
+                </div>
+            </div>
+            <div class="rowsSection">
+                <div class="positionRow">6</div>
+                <div class="row">
+                    <div class="square" id="a6"></div>
+                    <div class="square" id="b6"></div>
+                    <div class="square" id="c6"></div>
+                    <div class="square" id="d6"></div>
+                    <div class="square" id="e6"></div>
+                    <div class="square" id="f6"></div>
+                    <div class="square" id="g6"></div>
+                    <div class="square" id="h6"></div>
+                </div>
+            </div>
+            <div class="rowsSection">
+                <div class="positionRow">5</div>
+                <div class="row">
+                    <div class="square" id="a5"></div>
+                    <div class="square" id="b5"></div>
+                    <div class="square" id="c5"></div>
+                    <div class="square" id="d5"></div>
+                    <div class="square" id="e5"></div>
+                    <div class="square" id="f5"></div>
+                    <div class="square" id="g5"></div>
+                    <div class="square" id="h5"></div>
+                </div>
+            </div>
+            <div class="rowsSection">
+                <div class="positionRow">4</div>
+                <div class="row">
+                    <div class="square" id="a4"></div>
+                    <div class="square" id="b4"></div>
+                    <div class="square" id="c4"></div>
+                    <div class="square" id="d4"></div>
+                    <div class="square" id="e4"></div>
+                    <div class="square" id="f4"></div>
+                    <div class="square" id="g4"></div>
+                    <div class="square" id="h4"></div>
+                </div>
+            </div>
+            <div class="rowsSection">
+                <div class="positionRow">3</div>
+                <div class="row">
+                    <div class="square" id="a3"></div>
+                    <div class="square" id="b3"></div>
+                    <div class="square" id="c3"></div>
+                    <div class="square" id="d3"></div>
+                    <div class="square" id="e3"></div>
+                    <div class="square" id="f3"></div>
+                    <div class="square" id="g3"></div>
+                    <div class="square" id="h3"></div>
+                </div>
+            </div>
+            <div class="rowsSection">
+                <div class="positionRow">2</div>
+                <div class="row">
+                    <div class="square" id="a2">
+                        <img src="imgaes/wp.png" alt="white pawn">
+                    </div>
+                    <div class="square" id="b2">
+                        <img src="imgaes/wp.png" alt="white pawn">
+                    </div>
+                    <div class="square" id="c2">
+                        <img src="imgaes/wp.png" alt="white pawn">
+                    </div>
+                    <div class="square" id="d2">
+                        <img src="imgaes/wp.png" alt="white pawn">
+                    </div>
+                    <div class="square" id="e2">
+                        <img src="imgaes/wp.png" alt="white pawn">
+                    </div>
+                    <div class="square" id="f2">
+                        <img src="imgaes/wp.png" alt="white pawn">
+                    </div>
+                    <div class="square" id="g2">
+                        <img src="imgaes/wp.png" alt="white pawn">
+                    </div>
+                    <div class="square" id="h2">
+                        <img src="imgaes/wp.png" alt="white pawn">
+                    </div>
+                </div>
+            </div>
+            <div class="rowsSection">
+                <div class="positionRow">1</div>
+                <div class="row">
+                    <div class="square" id="a1">
+                        <img src="imgaes/wr.png" alt="white rook">
+                    </div>
+                    <div class="square" id="b1">
+                        <img src="imgaes/wn.png" alt="white knight">
+                    </div>
+                    <div class="square" id="c1">
+                        <img src="imgaes/wb.png" alt="white bishop">
+                    </div>
+                    <div class="square" id="d1">
+                        <img src="imgaes/wq.png" alt="white queen">
+                    </div>
+                    <div class="square" id="e1">
+                        <img src="imgaes/wk.png" alt="white king">
+                    </div>
+                    <div class="square" id="f1">
+                        <img src="imgaes/wb.png" alt="white bishop">
+                    </div>
+                    <div class="square" id="g1">
+                        <img src="imgaes/wn.png" alt="white knight">
+                    </div>
+                    <div class="square" id="h1">
+                        <img src="imgaes/wr.png" alt="white rook">
+                    </div>
+                </div>
+            </div>
+            <div class="rowsSection positionBox">
+                <div></div>
+                <div class="row">
+                    <div class="square positionCol">a</div>
+                    <div class="square positionCol">b</div>
+                    <div class="square positionCol">c</div>
+                    <div class="square positionCol">d</div>
+                    <div class="square positionCol">e</div>
+                    <div class="square positionCol">f</div>
+                    <div class="square positionCol">g</div>
+                    <div class="square positionCol">h</div>
+                </div>
+            </div>
+        </div>
+        <div class="options">
+            <div class="buttons">
+                <button id="reset">Reset</button>
+                <button id="undo">Undo</button>
+                <button id="redo">Redo</button>
+                <button id="stop">Stop</button>
+                <button id="pause">Pause</button>
+            </div>
+            <div class="turn"></div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
