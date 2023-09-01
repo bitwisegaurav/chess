@@ -4,6 +4,7 @@ body {
   place-items: center;
   background-color: #302e2b;
   font-family: "Roboto", sans-serif;
+  transition: all 0.3s ease-in-out;
 }
 
 .container {
@@ -98,4 +99,21 @@ body {
 .container .options .buttons button:hover {
   background-color: #789a54;
   color: #eaedcc;
+}
+.container .secondturn {
+  transform: rotate(180deg);
+}
+.container .secondturn .rowsSection .row .square img {
+  transform: rotate(180deg);
+}
+.container .secondturn .rowsSection .row .positionCol {
+  transform: rotate(180deg);
+}
+.container .secondturn .rowsSection:last-child {
+  order: -2;
+}
+.container .secondturn .rowsSection .positionRow {
+  left: auto;
+  right: -2rem;
+  transform: rotate(180deg);
 }/*# sourceMappingURL=style.css.map */

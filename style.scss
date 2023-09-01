@@ -3,6 +3,7 @@ $square-color: #789a54;
 $light-square-color: #eaedcc;
 $text-color: #a9a094;
 $bg-color: #302e2b;
+$width-position-box: 2rem;
 $font-family: 'Roboto', sans-serif;
 
 body{
@@ -11,6 +12,11 @@ body{
     place-items: center;
     background-color: $bg-color;
     font-family: $font-family;
+    transition: all .3s ease-in-out;
+}
+
+@mixin transform(){
+    transform: rotate(180deg);
 }
 
 .container {
@@ -25,7 +31,6 @@ body{
       display: grid;
       grid-template-rows: repeat(9, 1fr);
       margin: 2rem;
-      $width-position-box: 2rem;
       position: relative;
 
       .rowsSection{
@@ -137,4 +142,28 @@ body{
             }
         }
     }
+
+    .secondturn{
+        @include transform;
+
+        .rowsSection{
+            .row{
+                .square img{
+                    @include transform;
+                }
+                .positionCol{
+                    @include transform;
+                }
+            }
+            &:last-child{
+                order: -2;
+            }
+            .positionRow{
+                left: auto;
+                right: -($width-position-box);
+                @include transform;
+            }
+        }
+    }
+
 }
