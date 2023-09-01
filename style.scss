@@ -6,13 +6,19 @@ $bg-color: #302e2b;
 $width-position-box: 2rem;
 $font-family: 'Roboto', sans-serif;
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .5s ease-in-out;
+}
+
 body{
     height: 100vh;
     display: grid;
     place-items: center;
     background-color: $bg-color;
     font-family: $font-family;
-    transition: all .3s ease-in-out;
 }
 
 @mixin transform(){
@@ -24,14 +30,21 @@ body{
   height: 95vh;
   color: $text-color;
   background-color: $bg-color;
+//   border: 2px solid darkblue;
+  display: flex;
+    flex-direction: column;
+  justify-content: space-evenly;
+    align-items: center;
   
   .board{
-      width: calc(100% - 4rem);
+      max-width: calc(100% - 4rem);
+      max-height: calc(100% - 10rem);
       aspect-ratio: 1/1;
       display: grid;
       grid-template-rows: repeat(9, 1fr);
-      margin: 2rem;
+      margin: 0 2rem 2rem;
       position: relative;
+    //   border: 2px solid red;
 
       .rowsSection{
         position: relative;
@@ -112,6 +125,8 @@ body{
     }
 
     .options{
+        $btn-width: 5rem;
+        $btn-height: 3rem;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -122,13 +137,17 @@ body{
             justify-content: space-evenly;
             flex-wrap: wrap;
             width: 80%;
+            max-width: 42rem;
             gap: 1rem;
             align-items: center;
+            // border: 2px solid green;
 
             button{
                 flex: 1;
                 aspect-ratio: 3/1;
-                border-radius: 1rem;
+                // max-width: $btn-width;
+                max-height: $btn-height;
+                border-radius: 5px;
                 border: none;
                 background-color: $text-color;
                 color: $bg-color;
